@@ -1,0 +1,253 @@
+/*Réglages généraux*/
+
+
+/*Body*/
+body {
+  background: linear-gradient(deepskyblue, white);
+  font-family: 'Comfortaa', cursive;
+  text-align: justify;	
+}
+body h1 {
+  text-align: center;
+}
+/*fin Body*/
+
+/*Header*/
+
+header {
+  width: 100%;
+  position: sticky;
+}
+
+/*Fin Header*/
+
+/*Navbar*/
+.navbar ul li {
+  list-style: none; /*pas de puce*/
+}
+.navbar ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none; /*pas de soulignement*/
+}
+
+.navbar ul li a:hover {
+  color: gold;
+}
+
+.navbar .dropdown-menu {
+  padding: 5px;
+  border-radius: 2%;
+}
+
+.navbar .dropdown-content {
+  display: none; /*caché*/
+  position: absolute; /*par dessus le texte*/
+  top: 50px;
+  left: 2%;
+  background-color: white;
+  border-radius: 2%;
+  width: auto;
+  padding: 0;
+}
+
+.navbar .dropdown-content li {
+  padding: 8px 50px;
+  margin: 0;
+}
+
+.navbar .dropdown-content li a {
+  color: black;
+  width: 100%;
+}
+
+.navbar .dropdown-content li:hover {
+  background-color: gold;
+}
+
+.navbar .dropdown-content li:hover a {
+  color: white;
+}
+
+.navbar #logo {
+  width: auto;
+}
+
+.navbar #logo:hover {
+  filter: brightness(150%); /*effet brillnce au passage au hover*/
+}
+
+.navbar .dropdown:hover {
+  cursor: pointer;
+}
+/*Fin navbar*/
+
+
+
+/*Class post (emplacement : article du container)*/
+.post {
+  display: flex;
+}
+.post img {
+  border-radius: 2%;
+}
+
+/*Fin Class post*/
+
+
+/*Footer*/
+footer {
+  background: linear-gradient(grey, white, white);
+  display: flex;
+  padding: 25px 0;
+}
+footer a {
+  color: black;
+  font-weight: bold;
+}
+footer a:hover {
+  color: purple;
+}
+
+/*Fin footer*/
+
+
+
+/*MEDIA QUERIES*/
+
+
+/*Desktop, largeur minimum de 1080px*/
+@media (min-width: 1080px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3%;
+  }
+  .navbar #logo {
+    height: 150px;
+  }
+  .navbar .dropdown-menu {
+    display: none;
+  }
+  .navbar .menu-links {
+    display: flex;
+    flex-grow: 2;
+    justify-content: space-around;
+  }
+  .navbar .menu-links li {
+    display: inline-block;
+  }
+  .container {
+    margin: 0 8%;
+  }
+  .post {
+    flex-direction: row;
+    margin: 100px 0;
+  }
+  .post img {
+    width: 600px;
+    height: 400px;
+  }
+  .post .text {
+    padding: 0 15px;
+  }
+  .reversed {
+    flex-direction: row-reverse;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/*Tablette (largeur compris entre 460px et 1079px)*/
+@media (min-width: 460px) and (max-width: 1079px) {
+  .navbar {
+    display: flex;
+    flex-direction: row; /*nav bar dispostion en ligne*/
+    justify-content: space-between; /*espace entre les éléments*/
+    align-items: center; /*centré*/
+    padding: 0px 3%;
+  }
+  .navbar #logo {
+    height: 125px;
+  }
+  .navbar .menu-links {
+    display: none; /*caché*/
+  }
+  .navbar .dropdown:active .dropdown-content {
+    display: block;
+  }
+  .navbar .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .container {
+    margin: 0 5%;
+  }
+  .post {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+  .post img {
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .post h2, .post p {
+    text-align: center;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer a {
+    margin-top: 10px;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 460px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3%;
+  }
+  .navbar #logo {
+    height: 100px;
+  }
+  .navbar .menu-links {
+    display: none;
+  }
+  .navbar .dropdown:active .dropdown-content {
+    display: block;
+  }
+  .navbar .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .container {
+    margin: 0 2%;
+  }
+  .post {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+  .post img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .post h2, .post p {
+    text-align: center;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer a {
+    margin-top: 10px;
+  }
+}

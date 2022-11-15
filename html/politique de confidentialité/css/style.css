@@ -1,0 +1,27 @@
+*{
+	font-family: 'Comfortaa', cursive;
+
+}
+
+header{
+	background: linear-gradient(cadetblue, white);
+	display: flex;
+	justify-content: space-around; /*espacement entre les blocks*/
+    align-items: center;
+	border: 10px solid black;
+	border-radius: 30px;
+	height: 300px;
+}
+
+main{
+	text-align: justify;
+	padding: 20px;
+	border: 5px solid black;
+	border-radius: 20px;
+
+
+}
+
+.space{
+	margin: 10px;
+}
